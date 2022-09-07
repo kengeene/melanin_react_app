@@ -5,8 +5,7 @@ const Sidebar = () => {
     return(
         <div style={styles.sidebar}>
             <div style={styles.top}>
-                <FontAwesomeIcon style={styles.imageIcon} icon="fa-road" />
-                <h3 style={styles.title}>Melanin Kapital</h3>
+                <img src="https://melaninkapital.com/wp-content/uploads/2021/10/hp2-logo.png" style={styles.logo} alt="logo"/>
             </div>
             <ul style={{paddingLeft: 0}}>
                 <a href="#" style={styles.link}><li style={styles.linkItem}><FontAwesomeIcon style={styles.icon} icon="fa-home" />Home</li></a>
@@ -23,10 +22,11 @@ const Sidebar = () => {
 
 const styles = {
     sidebar: {
-        backgroundColor: '#ffffff'
+        backgroundColor: '#ffffff',
     },
-    imageIcon:{
-        display: 'inline-block'
+    logo:{
+        display: 'inline-block',
+        width: '150px'
     },
     top:{
         padding: '20px'

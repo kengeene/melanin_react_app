@@ -12,15 +12,15 @@ const Topbar = ({user}) => {
                 <FontAwesomeIcon icon="fa-search" />
                 </div>
             </div>
-            <div style={{display: 'inline-block'}}>
+            <div style={{display: 'inline-block', width: '10%'}}>
                 <FontAwesomeIcon icon="fa-envelope" style={{marginRight: '10px'}} />
                 <FontAwesomeIcon icon="fa-bell" />
             </div>
-            <div style={{textAlign: 'right',display: 'inline-block', float: 'right'}}>
+            <div style={{textAlign: 'right',display: 'inline-block', float: 'right', width:'20%'}}>
                 <img src='https://randomuser.me/api/portraits/men/5.jpg' alt='profile_picture' style={{display: 'inline-block', width: '50px', height: '50px', borderRadius: '50%', marginRight: '10px'}}/>
                 <div style={{display: 'inline-block', float: 'right'}}>
-                    <span style={{fontSize: '14px', display: 'block', fontWeight: 'bold'}}>{user.name}</span>
-                    <span style={{fontSize: '10px', display: 'block'}}>{user.occupation} <FontAwesomeIcon icon="fa-chevron-down" /></span>
+                    <span style={{fontSize: '14px', display: 'block', fontWeight: 'bold'}}>Test Name</span>
+                    <span style={{fontSize: '10px', display: 'block'}}>Entrepreneur <FontAwesomeIcon icon="fa-chevron-down" /></span>
                 </div>
             </div>
         </div>
@@ -30,14 +30,16 @@ const Topbar = ({user}) => {
 
 const styles={
     menubar: {
-        display: 'block',
+        display: 'inline-flex',
+        alignItems: 'center',
         height: '10vh',
         padding: '2vh',
-        backgroundColor: '#ffffff'
+        backgroundColor: '#ffffff',
+        width: '100%'
     },
     heading: {
         paddingLeft: '30px',
-        width: '30vw',
+        width: '30%',
         display: 'inline-block'
     },
     searchbar: {
