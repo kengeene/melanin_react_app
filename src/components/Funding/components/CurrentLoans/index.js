@@ -9,9 +9,9 @@ const CurrentLoans = () => {
                 <LineChart/>
             </div>
             <div>
-              <div style={{display: 'block'}}>
+              <div style={{display: 'inline-flex', alignItems: 'center'}}>
                 <h2 style={{display: 'inline-block'}}>Diaspora SME Loan</h2>
-                <span style={{display: 'inline-block', float: 'right'}}>Active</span>
+                <span style={{display: 'inline-block', float: 'right', color: '#9bcbc9'}}>Active</span>
               </div>
               <PieChart/>
             </div>

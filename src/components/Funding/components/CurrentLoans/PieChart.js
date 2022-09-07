@@ -8,7 +8,7 @@ export const data = {
   labels: ['Loan Balance', 'Amount Repaid'],
   datasets: [
     {
-      label: '# of Votes',
+      label: 'Loan Amounts',
       data: [1900000, 2100000],
       backgroundColor: [
         '#e4e4e4',
