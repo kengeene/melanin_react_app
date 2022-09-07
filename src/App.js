@@ -3,16 +3,26 @@ import Sidebar from './components/Sidebar';
 import { faSearch } from '@fortawesome/fontawesome-free-solid';
 import fontawesome from '@fortawesome/fontawesome'
 import Body from './components/Body';
+import React, { useState, useEffect } from 'react';
 
 fontawesome.library.add(faSearch);
 
+const axios = require('axios');
+
 function App() {
+  const [user, setUser] = useState({});
+  useEffect(() => {
+    axios.get('http://localhost:3100/api/users/3').then(async response => {
+    const user = await response.data;
+    setUser(user);
+  });
+  });
   return (
     <div style={styles.container}>
       <div style={styles.sidebar}>
           <Sidebar/>
         </div>
-        <Body />
+        <Body user={user}/>
       </div>
   );
 }

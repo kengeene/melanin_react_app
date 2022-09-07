@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const Topbar = () => {
+const Topbar = ({user}) => {
     return(
         <div style={styles.menubar}>
             <div style={styles.heading}>
@@ -19,8 +19,8 @@ const Topbar = () => {
             <div style={{textAlign: 'right',display: 'inline-block', float: 'right'}}>
                 <img src='https://randomuser.me/api/portraits/men/5.jpg' alt='profile_picture' style={{display: 'inline-block', width: '50px', height: '50px', borderRadius: '50%', marginRight: '10px'}}/>
                 <div style={{display: 'inline-block', float: 'right'}}>
-                    <span style={{fontSize: '14px', display: 'block', fontWeight: 'bold'}}>Tafari Mwangi</span>
-                    <span style={{fontSize: '10px', display: 'block'}}>Entrepreneur <FontAwesomeIcon icon="fa-chevron-down" /></span>
+                    <span style={{fontSize: '14px', display: 'block', fontWeight: 'bold'}}>{user.name}</span>
+                    <span style={{fontSize: '10px', display: 'block'}}>{user.occupation} <FontAwesomeIcon icon="fa-chevron-down" /></span>
                 </div>
             </div>
         </div>
