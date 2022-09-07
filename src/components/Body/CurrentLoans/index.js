@@ -3,7 +3,7 @@ import PieChart from './PieChart';
 
 const CurrentLoans = () => {
     return(
-          <div style={{display: 'inline-block', width: '45%', backgroundColor: '#ffffff', margin: '10px', float: 'right', padding: '20px'}}>
+          <div>
             <div>
                 <h2>Current loans</h2>
                 <LineChart/>

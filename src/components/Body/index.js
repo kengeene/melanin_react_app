@@ -7,11 +7,14 @@ const Body = () => {
     return (
      <div style={styles.main}>
           <Menubar/>
-          <div style={{display: 'inline-block', width: '45%'}}>
+          <div style={{display: 'inline-block', width: '65%'}}>
             <FundingCard/>
+            <div style={{clear: 'both'}}/>
             <LoanHistory/>
           </div>
-          <CurrentLoans/>
+          <div style={{display: 'inline-block', width: '30%', backgroundColor: '#ffffff', margin: '10px', float: 'right', padding: '20px'}}>
+            <CurrentLoans/>
+          </div>
         </div>
     );
 };
