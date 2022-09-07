@@ -1,5 +1,4 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import '../../css/styles.css';
 
 const FundingCard = () => {
     return(

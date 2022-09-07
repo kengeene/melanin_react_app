@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
     return(
@@ -7,18 +8,20 @@ const Sidebar = () => {
             <div style={styles.top}>
                 <img src="https://melaninkapital.com/wp-content/uploads/2021/10/hp2-logo.png" style={styles.logo} alt="logo"/>
             </div>
-            <ul style={{paddingLeft: 0}}>
-                <a href="#" style={styles.link}><li style={styles.linkItem}><FontAwesomeIcon style={styles.icon} icon="fa-home" />Home</li></a>
-                <a href="#" style={styles.link}><li style={styles.linkItem}><FontAwesomeIcon style={styles.icon} icon="fa-folder" />Business Profile</li></a>
-                <a href="#" style={styles.link}><li style={styles.linkItem}><FontAwesomeIcon style={styles.icon} icon="fa-exclamation-triangle" />Risk Profile</li></a>
-                <a href="#" style={styles.link}><li style={styles.linkItem}><FontAwesomeIcon style={styles.icon} icon="fa-chart-pie" />Funding</li></a>
-                <a href="#" style={styles.link}><li style={styles.linkItem}><FontAwesomeIcon style={styles.icon} icon="fa-users" />Konnect</li></a>
-                <a href="#" style={styles.link}><li style={styles.linkItem}><FontAwesomeIcon style={styles.icon} icon="fa-user-graduate" />Academy</li></a>
-                <a href="#" style={styles.link}><li style={styles.linkItem}><FontAwesomeIcon style={styles.icon} icon="fa-envelope" />Support</li></a>
-            </ul>
+            <nav style={{paddingLeft: 0}}>
+                <NavLink to="home" style={({ isActive }) => isActive ? styles.linkItemActive : styles.linkItemInactive}><FontAwesomeIcon style={styles.icon} icon="fa-home" />Home</NavLink>
+                <NavLink to="business-profile" style={({ isActive }) => isActive ? styles.linkItemActive : styles.linkItemInactive}><FontAwesomeIcon style={styles.icon} icon="fa-folder" />Business Profile</NavLink>
+                <NavLink to="risk-profile" style={({ isActive }) => isActive ? styles.linkItemActive : styles.linkItemInactive}><FontAwesomeIcon style={styles.icon} icon="fa-exclamation-triangle" />Risk Profile</NavLink>
+                <NavLink to="/" style={({ isActive }) => isActive ? styles.linkItemActive : styles.linkItemInactive}><FontAwesomeIcon style={styles.icon} icon="fa-chart-pie" />Funding</NavLink>
+                <NavLink to="konnect" style={({ isActive }) => isActive ? styles.linkItemActive : styles.linkItemInactive}><FontAwesomeIcon style={styles.icon} icon="fa-users" />Konnect</NavLink>
+                <NavLink to="academy" style={({ isActive }) => isActive ? styles.linkItemActive : styles.linkItemInactive}><FontAwesomeIcon style={styles.icon} icon="fa-user-graduate" />Academy</NavLink>
+                <NavLink to="support" style={({ isActive }) => isActive ? styles.linkItemActive : styles.linkItemInactive}><FontAwesomeIcon style={styles.icon} icon="fa-envelope" />Support</NavLink>
+            </nav>
         </div>
     );
 };
+
+
 
 const styles = {
     sidebar: {
@@ -35,10 +38,21 @@ const styles = {
         textDecoration: 'none',
         color: '#000000'
     },
-    linkItem: {
+    linkItemActive: {
+        backgroundColor: '#ffab00',
+        textDecoration: 'none',
+        color: '#000000',
         display: 'block',
         padding: '20px',
-        backgroundColor: '#ffab00',
+        margin: '20px 0',
+        borderRadius: '0 30px 30px 0'
+    },
+    linkItemInactive: {
+        backgroundColor: '#ffffff',
+        textDecoration: 'none',
+        color: '#000000',
+        display: 'block',
+        padding: '20px',
         margin: '20px 0',
         borderRadius: '0 30px 30px 0'
     },
