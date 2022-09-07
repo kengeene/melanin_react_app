@@ -1,7 +1,7 @@
 import Menubar from './Topbar.js';
 import FundingCard from './FundingCard';
 import LoanHistory from './LoanHistory';
-import CurrentLoans from './CurrentLoans.js';
+import CurrentLoans from './CurrentLoans/index.js';
 
 const Body = () => {
     return (
