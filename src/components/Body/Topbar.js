@@ -12,8 +12,16 @@ const Topbar = () => {
                 <FontAwesomeIcon icon="fa-search" />
                 </div>
             </div>
-            <div style={{textAlign: 'right',display: 'inline-block'}}>
-                User Icon
+            <div style={{display: 'inline-block'}}>
+                <FontAwesomeIcon icon="fa-envelope" style={{marginRight: '10px'}} />
+                <FontAwesomeIcon icon="fa-bell" />
+            </div>
+            <div style={{textAlign: 'right',display: 'inline-block', float: 'right'}}>
+                <img src='https://randomuser.me/api/portraits/men/5.jpg' alt='profile_picture' style={{display: 'inline-block', width: '50px', height: '50px', borderRadius: '50%', marginRight: '10px'}}/>
+                <div style={{display: 'inline-block', float: 'right'}}>
+                    <span style={{fontSize: '14px', display: 'block', fontWeight: 'bold'}}>Tafari Mwangi</span>
+                    <span style={{fontSize: '10px', display: 'block'}}>Entrepreneur <FontAwesomeIcon icon="fa-chevron-down" /></span>
+                </div>
             </div>
         </div>
     );
@@ -41,6 +49,11 @@ const styles={
     searchbarInput: {
         width: '13vw',
         border: 'none'
+    },
+    profilePhoto: {
+        height: '50px',
+        width: '50px',
+        borderRadius: '50%'
     }
 };
 export default Topbar;
