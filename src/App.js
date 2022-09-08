@@ -15,6 +15,7 @@ function App() {
   useEffect(() => {
     axios.get('http://localhost:3100/api/users/3').then(async response => {
     const user = await response.data;
+    console.log('user', user);
     setUser(user);
   });
   });
