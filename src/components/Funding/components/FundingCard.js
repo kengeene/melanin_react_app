@@ -7,11 +7,11 @@ const FundingCard = () => {
              <h4 style={{display: 'block'}}>Get more funding Today!</h4>
              <span style={{display: 'block', fontSize: '14px'}}>What Kind of Funding would you want for your business?</span>
              <div style={{display: 'block', marginTop: '20px'}}>
-                <div style={{display: 'inline-block',backgroundColor: '#feebc3',borderRadius: '10px',height: '50px',width: '40%', padding: '10px'}}>
+                <div style={{display: 'inline-block',backgroundColor: '#feebc3',borderRadius: '10px',height: '50px',width: '40%', padding: '10px', cursor: 'pointer'}}>
                     <span style={styles.cardText}>Get a Loan</span>
                     <FontAwesomeIcon icon="fa-solid fa-location-arrow" style={styles.icon} />
                 </div>
-                <div style={{display: 'inline-block',backgroundColor: '#feebc3',borderRadius: '10px',height: '50px',width: '40%', padding: '10px', float: 'right'}}>
+                <div style={{display: 'inline-block',backgroundColor: '#feebc3',borderRadius: '10px',height: '50px',width: '40%', padding: '10px', cursor: 'pointer', float: 'right'}}>
                     <span style={styles.cardText}>Get Private Capital</span>
                     <FontAwesomeIcon icon="fa-solid fa-location-arrow" style={styles.icon}/>
                 </div>
