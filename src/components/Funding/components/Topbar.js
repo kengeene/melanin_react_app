@@ -5,7 +5,7 @@ const axios = require('axios');
 const Topbar = () => {
       const [user, setUser] = useState({});
       useEffect(() => {
-    axios.get('http://localhost:3100/api/users/').then(async response => {
+    axios.get('http://keen-swan-27e2d4.netlify.app:3110/api/users/').then(async response => {
     const user = await response.data;
     console.log('user', user);
     setUser(user);
