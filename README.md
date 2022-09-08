@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Dev notes
+To generate data I decided to use the faker API https://fakerjs.dev/
+
 ## Available Scripts
 
 In the project directory, you can run:
