@@ -1,6 +1,16 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useState, useEffect } from 'react';
+import { faker } from '@faker-js/faker';
 
 const FundingCard = () => {
+    const [totalCapital, setTotalCapital ] = useState([]);
+    const [totalLoan, setTotalLoan ] = useState([]);
+
+    useEffect(()=>{
+        setTotalLoan(faker.datatype.number({min: 300000, max: 7000000}));
+        setTotalCapital(faker.datatype.number({min: 300000, max: 7000000}));
+    }, []);
+
     return(
         <div style={{display: 'block', height: '30%', backgroundColor: '#ffffff', padding: '0 0 10px 10px', margin: '10px 0 10px 10px'}}>
             <div style={{display: 'inline-block'}}>
@@ -20,11 +30,11 @@ const FundingCard = () => {
             <div style={{display: 'inline-block', width: '40%', float: 'right', backgroundColor: '#ffab00', padding: '10px 5px', borderRadius: '10px'}}>
                 <h4>Funds Statistics</h4>
                 <div style={styles.fundsCard}>
-                    <span style={styles.fundsCardValue}>KES 6,690,900</span>
+                    <span style={styles.fundsCardValue}>KES {totalCapital.toLocaleString()}</span>
                     <span style={styles.fundsCardTitle}>Total private capital</span>
                 </div>
                 <div style={styles.fundsCard}>
-                    <span style={styles.fundsCardValue}> KES 3,000,000</span>
+                    <span style={styles.fundsCardValue}> KES {totalLoan.toLocaleString()}</span>
                     <span style={styles.fundsCardTitle}>Total loan borroed</span>
                 </div>
             </div>

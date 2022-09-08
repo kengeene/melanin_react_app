@@ -1,15 +1,17 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState, useEffect } from 'react';
-const axios = require('axios');
+import { faker } from '@faker-js/faker';
 
 const Topbar = () => {
       const [user, setUser] = useState({});
       useEffect(() => {
-    axios.get('http://keen-swan-27e2d4.netlify.app:3110/api/users/').then(async response => {
-    const user = await response.data;
-    console.log('user', user);
-    setUser(user);
-  });
+        const generatedUser = {
+            userId: faker.datatype.uuid(),
+            username: faker.name.fullName(),
+            jobTitle: faker.name.jobTitle(),
+            avatar: faker.image.avatar(),
+        };
+        setUser(generatedUser);
   }, []);
     return(
         <div style={styles.menubar}>
@@ -27,10 +29,10 @@ const Topbar = () => {
                 <FontAwesomeIcon icon="fa-bell" />
             </div>
             <div style={{textAlign: 'right',display: 'inline-block', float: 'right', width:'20%'}}>
-                <img src='https://randomuser.me/api/portraits/men/5.jpg' alt='profile_picture' style={{display: 'inline-block', width: '50px', height: '50px', borderRadius: '50%', marginRight: '10px'}}/>
+                <img src={user.avatar} alt='profile_picture' style={{display: 'inline-block', width: '50px', height: '50px', borderRadius: '50%', marginRight: '10px'}}/>
                 <div style={{display: 'inline-block', float: 'right'}}>
-                    <span style={{fontSize: '14px', display: 'block', fontWeight: 'bold'}}>{user.name}</span>
-                    <span style={{fontSize: '10px', display: 'block'}}>{user.occupation} <FontAwesomeIcon icon="fa-chevron-down" /></span>
+                    <span style={{fontSize: '14px', display: 'block', fontWeight: 'bold'}}>{user.username}</span>
+                    <span style={{fontSize: '10px', display: 'block'}}>{user.jobTitle} <FontAwesomeIcon icon="fa-chevron-down" /></span>
                 </div>
             </div>
         </div>

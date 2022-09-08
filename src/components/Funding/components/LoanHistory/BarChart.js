@@ -9,6 +9,7 @@ import {
   Legend,
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
+import { faker } from '@faker-js/faker';
 
 ChartJS.register(
   CategoryScale,
@@ -28,16 +29,19 @@ export const options = {
   },
 };
 
-const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'Devember'];
+const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-const Data = [50, 80 ,90, 30, 12, 56, 80, 50, 80 ,90, 50, 80];
+const chartNumbers = [];
+Array.from({ length: 12 }).forEach(() => {
+  chartNumbers.push(faker.datatype.number({min: 300000, max: 3000000}));
+});
 
 export const data = {
   labels,
   datasets: [
     {
       label: 'KES',
-      data: Data.map(x => x),
+      data: chartNumbers.map(x => x),
       backgroundColor: '#ffab00',
       pointHoverBackgroundColor: '#000000'
     }
