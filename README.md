@@ -7,6 +7,7 @@ To generate data I decided to use the faker API https://fakerjs.dev/
 
 ## Live web app
 [![Netlify Status](https://api.netlify.com/api/v1/badges/88c891aa-1696-4bbf-b3cf-af93fbf90939/deploy-status)](https://app.netlify.com/sites/keen-swan-27e2d4/deploys)
+You can see a live preview of the app here: https://keen-swan-27e2d4.netlify.app
 
 ## Available Scripts
 
