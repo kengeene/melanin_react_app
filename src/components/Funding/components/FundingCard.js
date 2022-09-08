@@ -12,7 +12,7 @@ const FundingCard = () => {
     }, []);
 
     return(
-        <div style={{display: 'block', height: '30%', backgroundColor: '#ffffff', padding: '0 0 10px 10px', margin: '10px 0 10px 10px'}}>
+        <div style={{display: 'block', height:'250px', backgroundColor: '#ffffff', padding: '0 0 20px 10px', margin: '10px 0 20px 10px'}}>
             <div style={{display: 'inline-block'}}>
              <h4 style={{display: 'block'}}>Get more funding Today!</h4>
              <span style={{display: 'block', fontSize: '14px'}}>What Kind of Funding would you want for your business?</span>
@@ -27,7 +27,7 @@ const FundingCard = () => {
                 </div>
             </div>
             </div>
-            <div style={{display: 'inline-block', width: '40%', float: 'right', backgroundColor: '#ffab00', padding: '10px 5px', borderRadius: '10px'}}>
+            <div style={{display: 'inline-block', width: '40%', height: '100%', float: 'right', backgroundColor: '#ffab00', padding: '10px 5px', borderRadius: '10px'}}>
                 <h4>Funds Statistics</h4>
                 <div style={styles.fundsCard}>
                     <span style={styles.fundsCardValue}>KES {totalCapital.toLocaleString()}</span>

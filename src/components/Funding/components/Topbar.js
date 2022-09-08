@@ -25,8 +25,14 @@ const Topbar = () => {
                 </div>
             </div>
             <div style={{display: 'inline-block', width: '10%'}}>
-                <FontAwesomeIcon icon="fa-envelope" style={{marginRight: '10px'}} />
-                <FontAwesomeIcon icon="fa-bell" />
+                <div style={{cursor: 'pointer', display: 'inline-block', margin: '20px'}}>
+                    <FontAwesomeIcon icon="fa-envelope" style={{marginRight: '-5px'}} />
+                    <span style={{fontSize: '10px', backgroundColor: 'rgb(254, 196, 26)', borderRadius: '15px', padding: '2px', color: '#ffffff'}}>2</span>
+                </div>
+                <div style={{cursor: 'pointer', display: 'inline-block', margin: '20px'}}>
+                <FontAwesomeIcon icon="fa-bell" style={{marginRight: '-5px'}}  />
+                <span style={{fontSize: '10px', backgroundColor: 'rgb(254, 196, 26)', borderRadius: '15px', padding: '2px', color: '#ffffff'}}>2</span>
+                </div>
             </div>
             <div style={{textAlign: 'right',display: 'inline-block', float: 'right', width:'20%'}}>
                 <img src={user.avatar} alt='profile_picture' style={{display: 'inline-block', width: '50px', height: '50px', borderRadius: '50%', marginRight: '10px'}}/>
@@ -38,7 +44,6 @@ const Topbar = () => {
         </div>
     );
 };
-
 
 const styles={
     menubar: {
